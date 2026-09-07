@@ -2,9 +2,18 @@ pipeline {
     agent any
 
     stages {
+
+        stage('Install Dependencies') {
+            steps {
+                bat 'python -m venv venv'
+                bat 'venv\\Scripts\\python.exe -m pip install --upgrade pip'
+                bat 'venv\\Scripts\\python.exe -m pip install psutil'
+            }
+        }
+
         stage('Run Server Monitoring') {
             steps {
-                bat '"C:\\Program Files\\Python313\\python.exe" monitor.py'
+                bat 'venv\\Scripts\\python.exe monitor.py'
             }
         }
     }
