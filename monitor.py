@@ -16,12 +16,12 @@ while True:
     print("Disk Usage :", disk, "%")
 
     if cpu > 80:
-        print("⚠️ WARNING: CPU usage is HIGH!")
+        print("WARNING: CPU usage is HIGH!")
 
     if ram > 80:
-        print("⚠️ WARNING: RAM usage is HIGH!")
+        print("WARNING: RAM usage is HIGH!")
 
     if disk > 80:
-        print("⚠️ WARNING: Disk usage is HIGH!")
+        print("WARNING: Disk usage is HIGH!")
 
     time.sleep(5)
